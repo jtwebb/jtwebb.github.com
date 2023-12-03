@@ -1,0 +1,70 @@
+---
+const { img, name, company } = Astro.props;
+---
+
+<div class="testimonial">
+  <div class="img">
+    <img src={img} alt={name}>
+  </div>
+  <div class="text">
+    <p>
+      <slot/>
+    </p>
+  </div>
+
+  <div class="author-info">
+    <h4 class="author">{name}</h4>
+    <h5 class="company">{company}</h5>
+  </div>
+</div>
+
+<style>
+  .testimonial {
+    border-radius: 20px;
+    border: 2px solid #444;
+    margin: 45px 2px 10px;
+    padding: 0 25px 15px 25px;
+    text-align: center;
+  }
+
+  .testimonial img {
+    border-radius: 90px;
+    box-shadow: 0px 10px 10px -8px rgba(0,0,0,.22);
+    margin: -45px auto 20px;
+    max-height: 90px;
+    max-width: 90px;
+  }
+
+  .testimonial .text {
+    font-style: italic;
+    text-align: left;
+  }
+
+  .testimonial .author-info {
+    margin-top: 20px;
+    position: relative;
+    text-align: left;
+  }
+
+  .testimonial .author-info .icon {
+    color: #04b4e0;
+    content: '';
+    font-size: 30px;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 7px;
+  }
+
+  .testimonial .author-info .author {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .testimonial .author-info .company {
+    color: #a5a6a7;
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+  }
+</style>

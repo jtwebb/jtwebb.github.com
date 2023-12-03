@@ -1,0 +1,11 @@
+---
+const { skill, percent } = Astro.props;
+---
+
+<div class="skill clearfix">
+  <h4>{skill}</h4>
+  <div class="skill-value">{percent}%</div>
+</div>
+<div class={`skill-container`}>
+  <div class="skill-percentage" style={`width: ${percent}%;`}></div>
+</div>

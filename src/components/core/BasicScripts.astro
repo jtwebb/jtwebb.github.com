@@ -1,0 +1,31 @@
+---
+---
+
+<script type="module" is:inline>
+  function attachEvent(selector, event, fn) {
+		const matches = document.querySelectorAll(selector);
+		if (matches?.length > 0) {
+			for (const element of matches) {
+				element.addEventListener(event, () => {
+					fn(element);
+				}, false);
+			}
+		}
+	}
+
+	window.onload = () => {
+		attachEvent('.menu-toggle', 'click', element => {
+			element.classList.toggle('open');
+			document.getElementById('site_header')?.classList.toggle('mobile-menu-hide');
+		});
+	};
+
+  window.onpageshow = () => {
+    document.getElementById('preloader')?.classList.toggle('hidden');
+    const element = document.querySelector('.menu-toggle');
+		if (element) {
+			element.classList.remove('open');
+		}
+		document.getElementById('site_header')?.classList.add('mobile-menu-hide');
+  };
+</script>

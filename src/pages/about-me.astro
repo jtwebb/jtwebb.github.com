@@ -1,0 +1,103 @@
+---
+import AboutItem from "../components/widgets/AboutItem.astro";
+import Testimonial from "../components/widgets/Testimonial.astro";
+import Layout from "../layouts/Layout.astro";
+
+const meta = {
+  title: "About Me | John Webb",
+  description: "About John Webb"
+};
+---
+
+<Layout {meta}>
+  <section class="animated-section">
+    <div class="section-content">
+      <div class="page-title">
+        <h2>About <span>Me</span></h2>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p>
+            Web development is my passion. I enjoy creating solutions that people love using.
+            Crafting quality, readable code for complex problems is what keeps me coming back.
+          </p>
+        </div>
+      </div>
+
+      <div class="white-space-50"></div>
+
+      <!-- About Items -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="block-title">
+            <h3>What <span>I Do</span></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-inner">
+            <div class="info-list-w-icon">
+              <AboutItem title="Problem Solving">
+                At heart, I am a problem solver. Nearly all (all?) problems have a solution and it's
+                my job to find the best one. I love that part of my work.
+              </AboutItem>
+
+              <AboutItem title="Clean Code">
+                As a web developer I read code more than I write it. I think that's true of all
+                developers. That's why I make a commitment to writing clean code every time.
+              </AboutItem>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-inner">
+            <div class="info-list-w-icon">
+              <AboutItem title="Collaboration">
+                No developer is a silo; myself included. I enjoy working with others to find the
+                best possible solution to a problem. I love learning from others, but also enjoy
+                helping out where I can.
+              </AboutItem>
+
+              <AboutItem title="Flexibility">
+                Priorities change. I get that. That's why I'm flexible in what I work on. I'm also
+                flexible in what technologies I use. Always looking for the right tech for the
+                problem at hand.
+              </AboutItem>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of About Items -->
+
+      <div class="white-space-30"></div>
+
+      <!-- Testimonials -->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="block-title">
+            <h3>Testimonials</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <div class="testimonials">
+            <Testimonial img="/assets/gramblin.jpeg" name="Jimmy Gramblin" company="Organi Studios">
+              I have had the pleasure of working with John Webb over the last 10 years. John's level
+              of knowledge has been a great asset to my business over the years. His ability to
+              solve complex issues and create solutions has been invaluable to me. John finds great
+              enjoyment in writing code and has proven to have an excelling talent for this field of
+              work. He is reliable and pleasant to work with. I would highly recommend John.
+            </Testimonial>
+          </div>
+        </div>
+      </div>
+      <!-- End of Testimonials -->
+    </div>
+  </section>
+</Layout>

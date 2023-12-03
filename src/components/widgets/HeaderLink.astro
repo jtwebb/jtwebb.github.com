@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-iconify';
+
+const { href, icon, ...props } = Astro.props;
+const { pathname } = Astro.url;
+const currentPath = pathname.replace(/\.\w+$/, '');
+const isActive = currentPath === href;
+
+const linkClass = isActive ? 'active nav-anim' : 'nav-anim';
+---
+
+<li>
+  <a href={href} class={linkClass}>
+    <span class="menu-icon">
+      <Icon name={icon}/>
+    </span>
+    <span class="link-text" {...props}>
+      <slot/>
+    </span>
+  </a>
+</li>
+
+<style>
+  .menu-icon svg {
+    max-height: 30px;
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+const { dateRange, company, title } = Astro.props;
+---
+
+<div class="timeline-item clearfix">
+  <div class="left-part">
+    <h5 class="item-period">{dateRange}</h5>
+    <span class="item-company">{company}</span>
+  </div>
+  <div class="divider"></div>
+  <div class="right-part">
+    <h4 class="item-title">{title}</h4>
+    <p>
+      <slot/>  
+    </p>
+  </div>
+</div>

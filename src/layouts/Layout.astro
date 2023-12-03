@@ -1,0 +1,32 @@
+---
+import '../assets/styles/reset.css';
+import '../assets/styles/grid.min.css';
+import '../assets/styles/base.css';
+import Preloader from '../components/widgets/Preloader.astro';
+import BasicScripts from '../components/core/BasicScripts.astro';
+import MetaTags from '../components/core/MetaTags.astro';
+import Header from '../components/widgets/Header.astro';
+
+const { meta = {} } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<MetaTags {...meta}/>
+	</head>
+	<body>
+		<Preloader/>
+		<main class="page">
+			<div class="page-content">
+				<Header/>
+				<div class="content-area">
+					<div class="animated-sections">
+						<slot/>
+					</div>
+				</div>
+			</div>
+		</main>
+		<BasicScripts/>
+	</body>
+</html>

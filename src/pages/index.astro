@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const meta = {};
+---
+
+<Layout {meta}>
+	<section data-id="home" class="animated-section start-page">
+		<div class="section-content vcentered">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<div class="title-block">
+							<h2>John Webb</h2>
+							<div class="text-rotation">                                    
+								<div class="item">
+									<div class="sp-subtitle" id="title">Web Developer</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+	</section>
+	<script type="module" is:inline>
+		const titles = [
+			'Web Developer',
+			'JavaScript Application Engineer',
+			'Full-Stack Developer'
+		];
+		let i = 1;
+		const titleElement = document.getElementById('title');
+		setInterval(() => {
+			if (titleElement) {
+				if (i < titles.length) {
+					titleElement.textContent = titles[i];
+					i++;
+				} else {
+					titleElement.textContent = titles[0];
+					i = 1;
+				}
+			}
+		}, 5000);
+	</script>
+</Layout>

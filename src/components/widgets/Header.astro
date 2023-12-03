@@ -1,0 +1,62 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { Icon } from 'astro-iconify';
+
+const year = (new Date()).getFullYear();
+---
+
+<header id="site_header" class="header mobile-menu-hide">
+  <div class="header-content">
+    <div class="header-photo">
+      <img src="/assets/logo.png" alt="John Webb Logo">
+    </div>
+    <div class="header-titles">
+      <h2>John Webb</h2>
+      <h4>Web Developer</h4>
+    </div>
+  </div>
+
+  <ul class="main-menu">
+    <HeaderLink href="/" icon="ph:house-light">Home</HeaderLink>
+    <HeaderLink href="/about-me" icon="ph:user">About Me</HeaderLink>
+    <HeaderLink href="/resume" icon="ph:clock-light">Resume</HeaderLink>
+  </ul>
+
+  <div class="social-links">
+    <ul>
+      <li title="GitHub">
+        <a href="https://github.com/jtwebb" target="_blank">
+          <Icon name="fa6-brands:github-alt"/>
+        </a>
+      </li>
+      <li title="LinkedIn">
+        <a href="https://www.linkedin.com/in/webb/" target="_blank">
+          <Icon name="fa6-brands:linkedin-in"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="header-buttons">
+    <a href="/assets/John-Webb-Resume.pdf" target="_blank" class="btn btn-primary">
+      Download Resume
+    </a>
+  </div>
+
+  <div class="copyrights">
+    &copy; {year === 2023 ? '2023' : `2023 - ${year}`} All rights reserved.
+  </div>
+</header>
+
+<div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<style>
+  .social-links svg {
+    vertical-align: middle;
+    width: 1rem;
+  }
+</style>

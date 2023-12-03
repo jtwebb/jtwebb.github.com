@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Skill from "../components/widgets/Skill.astro";
+import ResumeItem from "../components/widgets/ResumeItem.astro";
+
+const meta = {
+  title: "Resume | John Webb",
+  description: "John Webb's Resume"
+};
+---
+
+<Layout {meta}>
+  <section data-id="resume" class="animated-section">
+    <div class="section-content">
+      <div class="page-title">
+        <h2>Resume</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <div class="block-title">
+            <h3>Experience</h3>
+          </div>
+
+          <div class="timeline timeline-second-style clearfix">
+            <ResumeItem
+              dateRange="2020 - Present"
+              company="Thought Industries"
+              title="Senior JavaScript Application Engineer"
+            >
+              Added new features to a Learning Management System. Worked closely with the planning
+              team to get features out the door quickly.
+            </ResumeItem>
+
+            <ResumeItem dateRange="2019" company="Freelance" title="Web Developer">
+              Worked as a freelance web developer for overflow work and trouble-shooting for various
+              companies.
+            </ResumeItem>
+
+            <ResumeItem
+              dateRange="2015 - 2019"
+              company="Kalibrate LLC"
+              title="Senior Software Developer"
+            >
+              Front-end development for the company's flagship product. Utilized AngularJS, Angular,
+              React, Java and .Net Core. Worked in an Agile team environment. Refactored a
+              significant part of the project with a focus on performance.
+            </ResumeItem>
+
+            <ResumeItem dateRange="2011 - 2015" company="Organi Studios" title="Senior Developer">
+              Advised and made decisions on which technologies to use to the best advantage on each
+              project, rewrote entire web applications, established workflows, did all of the web
+              programming for the company.
+            </ResumeItem>
+
+            <ResumeItem dateRange="2005 - 2011" company="Freelance" title="Web Developer">
+              Built several websites for businesses in the service industry.
+            </ResumeItem>
+          </div>
+        </div>
+
+        <!-- Skills & Certificates -->
+        <div class="col-xs-12 col-sm-5">
+          <!-- Coding Skills -->
+          <div class="block-title">
+            <h3>Coding <span>Skills</span></h3>
+          </div>
+
+          <div class="skills-info skills-second-style">
+            <Skill skill="JavaScript" percent="95" />
+            <Skill skill="HTML/CSS" percent="95" />
+            <Skill skill="React" percent="85" />
+            <Skill skill="PHP" percent="75" />
+          </div>
+          <!-- End of Coding Skills -->
+
+          <div class="white-space-10"></div>
+
+          <!-- Knowledges -->
+          <div class="block-title">
+            <h3>Knowledge</h3>
+          </div>
+
+          <ul class="knowledges">
+            <li>Time Management</li>
+            <li>Communication</li>
+            <li>Problem-Solving</li>
+            <li>Flexibility</li>
+            <li>Testing</li>
+          </ul>
+          <!-- End of Knowledges -->
+        </div>
+        <!-- End of Skills & Certificates -->
+      </div>
+    </div>
+  </section>
+</Layout>

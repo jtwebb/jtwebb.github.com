@@ -1,0 +1,26 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="info-block">
+  <div class="ci-text">
+    <h4>{title}</h4>
+    <p>
+      <slot/>
+    </p>
+  </div>
+</div>
+
+<style>
+  .info-block {
+    margin-bottom: 25px;
+  }
+
+  .info-block .ci-text h4 {
+    margin: 5px 0;
+  }
+
+  .info-block .ci-text p {
+      font-size: .95em;
+  }
+</style>
